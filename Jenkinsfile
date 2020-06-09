@@ -1,6 +1,5 @@
 pipeline {
    agent any
-
    stages {
       stage('SCM') {
          steps {
@@ -15,8 +14,8 @@ pipeline {
             npm run build
             npm audit fix
             '''
-            }
-         }
+          }
+       }
       stage('Deploy') {
          steps {
             sh '''
